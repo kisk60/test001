@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Logic IQ | ひらめき診断</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="brand">
+      <div class="brand-mark" aria-hidden="true">IQ</div>
+      <div>
+        <p class="eyebrow">LOGIC IQ</p>
+        <h1>ひらめき診断</h1>
+      </div>
+    </header>
+
+    <section class="intro-panel" id="intro-panel">
+      <div class="hero-copy">
+        <p class="eyebrow accent">YOUR MIND, UNLOCKED</p>
+        <h2>思考のスピードと<br><em>ひらめき</em>を試そう。</h2>
+        <p class="description">数列やパターンを読み解く、全30問のミニテスト。正解数をもとに、あなたの現在のIQ目安を測定します。</p>
+        <button class="primary-button" id="start-button">テストを始める <span>→</span></button>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="orb">?</div>
+        <span class="art-label label-a">01</span>
+        <span class="art-label label-b">∑</span>
+        <span class="art-label label-c">△</span>
+      </div>
+    </section>
+
+    <section class="quiz-panel hidden" id="quiz-panel">
+      <div class="quiz-topline">
+        <span id="question-count">QUESTION 01 / 20</span>
+        <span id="progress-percent">0%</span>
+      </div>
+      <div class="progress-track"><div class="progress-bar" id="progress-bar"></div></div>
+      <div class="question-card">
+        <p class="question-category" id="question-category">NUMBER PATTERN</p>
+        <h2 id="question-text"></h2>
+        <div class="choices-grid" id="choices"></div>
+      </div>
+      <button class="next-button" id="next-button" disabled>次の問題へ <span>→</span></button>
+    </section>
+
+    <section class="result-panel hidden" id="result-panel">
+      <p class="eyebrow accent">YOUR RESULT</p>
+      <h2>診断結果</h2>
+      <div class="score-ring"><div><strong id="iq-score">--</strong><span>IQ SCORE</span></div></div>
+      <p class="result-message" id="result-message"></p>
+      <div class="result-stats">
+        <div><strong id="correct-count">0</strong><span>正解数</span></div>
+        <div><strong id="total-count">0</strong><span>問題数</span></div>
+        <div><strong id="accuracy">0%</strong><span>正答率</span></div>
+      </div>
+      <button class="primary-button" id="restart-button">もう一度挑戦する <span>↗</span></button>
+    </section>
+
+    <section class="settings-panel hidden" id="settings-panel">
+      <div>
+        <p class="eyebrow">NEW TEST</p>
+        <h2>問題数を選択</h2>
+        <p>集中できるボリュームを選んでください。</p>
+      </div>
+      <div class="count-options">
+        <button class="count-option" data-count="10"><strong>10</strong><span>QUICK</span></button>
+        <button class="count-option selected" data-count="20"><strong>20</strong><span>STANDARD</span></button>
+        <button class="count-option" data-count="30"><strong>30</strong><span>CHALLENGE</span></button>
+      </div>
+      <button class="primary-button" id="new-test-button">この問題数で開始 <span>→</span></button>
+    </section>
+
+    <footer>LOGIC IQ <span>•</span> これはエンターテインメント目的の簡易診断です。</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
